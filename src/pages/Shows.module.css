@@ -1,0 +1,224 @@
+.shows {
+  min-height: 100vh;
+}
+
+.header {
+  padding: 100px 0 64px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(56px, 10vw, 120px);
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.sub {
+  font-size: 16px;
+  color: #777;
+  max-width: 400px;
+}
+
+/* Empty state */
+.empty {
+  padding: 100px 0;
+}
+
+.emptyBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.emptyIcon {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.emptyTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  color: #fff;
+  letter-spacing: 0.06em;
+}
+
+.emptyText {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Listing (kept for future use) */
+.listing {
+  padding: 64px 0 100px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr auto;
+  align-items: center;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.row:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.row:hover {
+  background: rgba(255,255,255,0.02);
+  padding-left: 8px;
+  margin-left: -8px;
+  padding-right: 8px;
+  margin-right: -8px;
+}
+
+.row.soldout {
+  opacity: 0.45;
+}
+
+.dateBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.month {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.day {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.venue {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.location {
+  font-size: 13px;
+  color: #555;
+  letter-spacing: 0.05em;
+}
+
+.support {
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Ticket buttons */
+.ticketBtn {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: 1px solid;
+  transition: all 0.2s;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.ticketBtn.available {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.ticketBtn.available:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.ticketBtn.soldout {
+  border-color: #333;
+  color: #444;
+  cursor: default;
+}
+
+.ticketBtn.soon {
+  border-color: #333;
+  color: #666;
+  cursor: default;
+}
+
+/* Booking */
+.booking {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding: 64px 0;
+}
+
+.bookingBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.bookingTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.bookingText {
+  font-size: 15px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 64px 1fr auto;
+    gap: 16px;
+  }
+  .support {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 56px 1fr;
+    gap: 12px;
+  }
+  .ticketBtn {
+    display: none;
+  }
+}

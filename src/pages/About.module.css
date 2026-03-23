@@ -1,0 +1,165 @@
+.about {
+  min-height: 100vh;
+}
+
+.header {
+  position: relative;
+  height: 60vh;
+  min-height: 360px;
+  overflow: hidden;
+}
+
+.headerBg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/happy.JPG');
+  background-size: cover;
+  background-position: center top;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 50vw;
+    min-height: 260px;
+  }
+
+  .headerBg {
+    background-position: 50% 20%;
+  }
+}
+
+
+/* Statement */
+.statement {
+  background: var(--accent);
+  padding: 64px 0;
+}
+
+.quote {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(24px, 4vw, 42px);
+  letter-spacing: 0.04em;
+  color: #fff;
+  line-height: 1.2;
+  max-width: 800px;
+  border: none;
+  margin: 0;
+}
+
+.quote cite {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-top: 16px;
+  opacity: 0.8;
+}
+
+/* Members */
+.members {
+  padding: 100px 0;
+}
+
+.sectionTitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 6vw, 64px);
+  color: #fff;
+  margin-bottom: 56px;
+}
+
+.memberGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--border);
+}
+
+.memberCard {
+  background: var(--bg);
+  padding: 40px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition: background 0.2s;
+}
+
+.memberCard:hover {
+  background: var(--bg-2);
+}
+
+.memberAvatar {
+  width: 96px;
+  height: 96px;
+  background: var(--bg-3);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  overflow: hidden;
+}
+
+.memberPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.memberInfo {
+  flex: 1;
+}
+
+.memberName {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.memberRole {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.igLink {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.igLink:hover {
+  color: #e1306c;
+}
+
+
+@media (max-width: 768px) {
+  .memberGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .memberCard {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .timelineItem {
+    grid-template-columns: 64px 32px 1fr;
+  }
+}
